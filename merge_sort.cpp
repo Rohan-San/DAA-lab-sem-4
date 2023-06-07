@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 using namespace std;
 
 void merge(int *a, int low, int high, int mid)
@@ -54,6 +55,7 @@ void mergeSort(int *a, int low, int high)
 
 int main()
 {
+        clock_t start,end;
         int n, i;
         cout << "Enter no. of elements to sort: ";
         cin >> n;
@@ -63,12 +65,15 @@ int main()
         {
                 cin >> arr[i];
         }
+        start = clock();
         mergeSort(arr, 0, n-1);;
+        end = clock();
         cout << "Sorted data: ";
         for (i=0; i<n; i++)
         {
                 cout << arr[i] << " ";
         }
         cout << endl;
+        cout << "Time taken: " << (double)(end-start)/CLOCKS_PER_SEC << endl;
         return 0;
 }
