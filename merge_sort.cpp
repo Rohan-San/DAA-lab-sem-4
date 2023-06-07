@@ -4,7 +4,7 @@ using namespace std;
 
 void merge(int *a, int low, int high, int mid)
 {
-        int i, j, k, temp[100];
+        int i, j, k, temp[high+1-low];
         i = low;
         k = 0;
         j = mid + 1;
