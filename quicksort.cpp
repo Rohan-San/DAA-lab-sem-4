@@ -37,6 +37,7 @@ void quickSort(int arr[], int start, int end)
 
 int main()
 {
+    clock_t start, end;
     int n;
     cout << "Enter no. of elements: ";
     cin >> n;
@@ -46,11 +47,13 @@ int main()
         cin >> arr[i];
     }
     cout << "The sorted array is: ";
+    start = clock();
     quickSort(arr, 0, n - 1);
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
+    end = clock();
     cout << endl;
+    cout << "Time taken to sort is: " << (double)(end-start)/CLOCKS_PER_SEC << endl;
     return 0;
 }
-
