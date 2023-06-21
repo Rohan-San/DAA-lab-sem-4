@@ -37,11 +37,20 @@ void quickSort(int arr[], int start, int end)
 
 int main()
 {
-    int arr[] = { 9, 3, 4, 2, 1, 8 };
-    int n = 6;
+    int n;
+    cout << "Enter no. of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter elements: ";
+    for (int i=0; i<n; i++){
+        cin >> arr[i];
+    }
+    cout << "The sorted array is: ";
     quickSort(arr, 0, n - 1);
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
+    cout << endl;
     return 0;
 }
+
