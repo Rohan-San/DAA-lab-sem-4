@@ -13,12 +13,13 @@ int G[V][V] = { { 0, 4, 4, 0, 0, 0 },
     			{ 0, 0, 4, 3, 3, 0 } };
 
 int main() {
+    clock_t start, end;
     int no_edge = 0, selected[V];
     memset(selected, false, sizeof(selected));  // Set selected false initially
     selected[0] = true;
     int x, y;  // Rows and columns
-    cout << "Edge" << " : " << "Weight";
-    cout << endl;
+    cout << "Edge" << " : " << "Weight" << endl;
+    start = clock();
     while (no_edge < V - 1) {
         int min = INF;
         x = 0;
@@ -41,5 +42,7 @@ int main() {
         selected[y] = true;
         no_edge++;
     }
+    end = clock();
+    cout << "Time taken: " << (double)(end-start)/CLOCKS_PER_SEC << endl;
     return 0;
 }
