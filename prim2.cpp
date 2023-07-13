@@ -1,13 +1,12 @@
 // Prim's Algorithm in C++
-
-#include <cstring>
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 #define INF 9999999
 
 // number of vertices in grapj
-#define V 5
+#define V 6
 
 // create a 2d array of size 5x5
 //for adjacency matrix to represent graph
@@ -17,7 +16,7 @@ int G[V][V] = { { 0, 4, 4, 0, 0, 0 },
     			{ 4, 2, 0, 3, 2, 4 },
                 { 0, 0, 3, 0, 0, 3 },
     			{ 0, 0, 2, 0, 0, 3 },
-    			{ 0, 0, 4, 3, 3, 0 } }
+    			{ 0, 0, 4, 3, 3, 0 } };
 
 int main() {
   int no_edge;  // number of edge
