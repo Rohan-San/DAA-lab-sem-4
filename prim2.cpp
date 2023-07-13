@@ -12,12 +12,12 @@ using namespace std;
 // create a 2d array of size 5x5
 //for adjacency matrix to represent graph
 
-int G[V][V] = {
-  {0, 9, 75, 0, 0},
-  {9, 0, 95, 19, 42},
-  {75, 95, 0, 51, 66},
-  {0, 19, 51, 0, 31},
-  {0, 42, 66, 31, 0}};
+int G[V][V] = { { 0, 4, 4, 0, 0, 0 },
+    			{ 4, 0, 2, 0, 0, 0 },
+    			{ 4, 2, 0, 3, 2, 4 },
+                { 0, 0, 3, 0, 0, 3 },
+    			{ 0, 0, 2, 0, 0, 3 },
+    			{ 0, 0, 4, 3, 3, 0 } }
 
 int main() {
   int no_edge;  // number of edge
